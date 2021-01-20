@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-    public void PantallaIncio ()
+    public void PantallaIncio()
     {
         SceneManager.LoadScene("Menu_Inicio");
     }
@@ -14,7 +14,7 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene("Menu_Controles");
     }
 
-    public void Play ()
+    public void Play()
     {
         SceneManager.LoadScene("SampleScene");
     }
