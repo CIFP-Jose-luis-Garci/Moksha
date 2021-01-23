@@ -17,14 +17,24 @@ public class MovPersonaje : MonoBehaviour
     public Camera camara;
     private Vector3 camForward;
     private Vector3 camRight;
+
+    [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         personaje = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        Movimiento();
+        DireccionCamara();
+        PonerGravedad();
+    }
+
+    void Movimiento()
     {
         movHorizontal = Input.GetAxis("Horizontal");
         movVertical = Input.GetAxis("Vertical");
@@ -32,17 +42,10 @@ public class MovPersonaje : MonoBehaviour
         controlPersonaje = new Vector3(movHorizontal, 0, movVertical);
         controlPersonaje = Vector3.ClampMagnitude(controlPersonaje, 1);
 
-        DireccionCamara();
-
-        movPersonaje = controlPersonaje.x * camRight + controlPersonaje.z * camForward;
-        movPersonaje = movPersonaje * speed;
-        personaje.transform.LookAt(personaje.transform.position + movPersonaje);
-
-        PonerGravedad();
-
+        
+        animator.SetFloat("Caminar", controlPersonaje.magnitude * speed);
         personaje.Move(movPersonaje * Time.deltaTime);
     }
-
     void DireccionCamara()
     {
         camForward = camara.transform.forward;
@@ -53,10 +56,13 @@ public class MovPersonaje : MonoBehaviour
 
         camForward = camForward.normalized;
         camRight = camRight.normalized;
+
+        movPersonaje = controlPersonaje.x * camRight + controlPersonaje.z * camForward;
+        movPersonaje = movPersonaje * speed;
+        personaje.transform.LookAt(personaje.transform.position + movPersonaje);
     }
     void PonerGravedad()
     {
-
         if (personaje.isGrounded)
         {
             velocidadCaida = -gravedad * Time.deltaTime;
