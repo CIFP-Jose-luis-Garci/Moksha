@@ -163,7 +163,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AndarAgachado
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6957930658343362354}
@@ -341,7 +341,7 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: Caminar
     m_Type: 1
-    m_DefaultFloat: 0.1
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -500,7 +500,7 @@ AnimatorStateMachine:
     m_Position: {x: 750, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4863295947200385722}
-    m_Position: {x: 700.1429, y: 179.82921, z: 0}
+    m_Position: {x: 700, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4531632546458756252}
     m_Position: {x: 350, y: 190, z: 0}
@@ -692,9 +692,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Caminar
-    m_EventTreshold: 0.01
   - m_ConditionMode: 2
     m_ConditionEvent: Agacharse
     m_EventTreshold: 0

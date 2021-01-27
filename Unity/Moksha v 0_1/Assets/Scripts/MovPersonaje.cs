@@ -19,19 +19,23 @@ public class MovPersonaje : MonoBehaviour
     private Vector3 camRight;
 
     [SerializeField] Animator animator;
+    bool agachado;
     // Start is called before the first frame update
     void Start()
     {
         personaje = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        agachado = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         Movimiento();
+
         DireccionCamara();
         PonerGravedad();
+        Interactividad();
     }
 
     void Movimiento()
@@ -72,6 +76,28 @@ public class MovPersonaje : MonoBehaviour
         {
             velocidadCaida -= gravedad * Time.deltaTime;
             movPersonaje.y = velocidadCaida;
+        }
+    }
+    void Interactividad()
+    {
+        if (Input.GetButtonDown("Accion"))
+        {
+            animator.SetTrigger("Accion");
+        }
+
+        if (Input.GetButtonDown("Agacharse"))
+        {
+            if (agachado == false)
+            {
+                animator.SetBool("Agacharse", true);
+                agachado = true;
+            }
+
+            if (agachado == true)
+            {
+                animator.SetBool("Agacharse", false);
+                agachado = false;
+            }
         }
     }
 }
