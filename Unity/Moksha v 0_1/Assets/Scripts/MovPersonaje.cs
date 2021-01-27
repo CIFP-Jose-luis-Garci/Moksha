@@ -19,13 +19,13 @@ public class MovPersonaje : MonoBehaviour
     private Vector3 camRight;
 
     [SerializeField] Animator animator;
-    bool agachado;
+    bool agachado = false;
     // Start is called before the first frame update
     void Start()
     {
         personaje = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-        agachado = false;
+        
     }
 
     // Update is called once per frame
@@ -80,24 +80,24 @@ public class MovPersonaje : MonoBehaviour
     }
     void Interactividad()
     {
-        if (Input.GetButtonDown("Accion"))
-        {
-            animator.SetTrigger("Accion");
-        }
-
         if (Input.GetButtonDown("Agacharse"))
         {
             if (agachado == false)
             {
                 animator.SetBool("Agacharse", true);
                 agachado = true;
+                speed = 1;
             }
 
-            if (agachado == true)
+            else
             {
                 animator.SetBool("Agacharse", false);
                 agachado = false;
             }
+        }
+        else if (Input.GetButtonDown("Accion"))
+        {
+            animator.SetTrigger("Accion");
         }
     }
 }
