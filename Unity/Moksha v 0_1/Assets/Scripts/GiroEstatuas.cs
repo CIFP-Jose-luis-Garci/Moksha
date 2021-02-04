@@ -7,16 +7,6 @@ public class GiroEstatuas : MonoBehaviour
     [SerializeField] Transform personaje;
     private float dist;
 
-    [SerializeField] Transform Posicion;
-    [SerializeField] Transform CorrectPos;
-
-    bool estatuaActiva = false;
-    [SerializeField] string aviso;
-
-    void start()
-    {
-
-    }
     void Update()
     {
         rotacion();

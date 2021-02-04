@@ -13,8 +13,8 @@ public class RecEstatuaInstanciador : MonoBehaviour
     [SerializeField] Transform monjeInitPos;
     [SerializeField] Transform monjeCorrectPos;
 
-    [SerializeField] Transform gatoInitPos;
-    [SerializeField] Transform gatoCorrectPos;
+    [SerializeField] Transform ciervoInitPos;
+    [SerializeField] Transform ciervoCorrectPos;
 
     [SerializeField] GameObject recompensa;
 
@@ -32,14 +32,31 @@ public class RecEstatuaInstanciador : MonoBehaviour
 
     void InstanciarRecompensa()
     {
-        if (leonInitPos.transform.rotation==leonCorrectPos.transform.rotation &&
+       /* if (leonInitPos.transform.rotation==leonCorrectPos.transform.rotation &&
             guerreroInitPos.transform.rotation == guerreroCorrectPos.transform.rotation && 
             monjeInitPos.transform.rotation == monjeCorrectPos.transform.rotation && 
-            gatoInitPos.transform.rotation == gatoCorrectPos.transform.rotation)
+            ciervoInitPos.transform.rotation == ciervoCorrectPos.transform.rotation)
         {
             Debug.Log("Opción Correcta");
             Instantiate(recompensa);
             StopCoroutine("RevCorrectPos");
+        }*/
+
+        if (leonInitPos.transform.rotation == leonCorrectPos.transform.rotation)
+        {
+            Debug.Log("Leon");
+        }
+        if (guerreroInitPos.transform.rotation == guerreroCorrectPos.transform.rotation)
+        {
+            Debug.Log("Guerrero");
+        }
+        if (monjeInitPos.transform.rotation == monjeCorrectPos.transform.rotation)
+        {
+            Debug.Log("Monje");
+        }
+        if (ciervoInitPos.transform.rotation == ciervoCorrectPos.transform.rotation)
+        {
+            Debug.Log("Ciervo");
         }
     }
     IEnumerator RevCorrectPos()
