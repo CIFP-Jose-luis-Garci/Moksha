@@ -16,7 +16,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Escena1");
     }
 }
 
