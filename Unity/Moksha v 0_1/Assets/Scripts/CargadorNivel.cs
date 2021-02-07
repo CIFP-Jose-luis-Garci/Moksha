@@ -37,7 +37,18 @@ public class CargadorNivel : MonoBehaviour
         }
 
     }
-    
+
+    public void Opciones()
+    {
+        SceneManager.LoadScene("Menu_Opciones");
+    }
+
+    public void Info()
+    {
+        SceneManager.LoadScene("Menu_Info");
+    }
+
+
     /*
    IEnumerator CargarAsync(int NumeroDeEscena)
    {

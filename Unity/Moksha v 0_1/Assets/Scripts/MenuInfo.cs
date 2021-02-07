@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuControles : MonoBehaviour
+public class MenuInfo : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Menu_Pausa");
+        SceneManager.LoadScene("Menu_Inicio");
     }
 }
