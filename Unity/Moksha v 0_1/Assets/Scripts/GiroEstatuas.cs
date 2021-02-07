@@ -23,7 +23,7 @@ public class GiroEstatuas : MonoBehaviour
 
                 if (dist <= 4)
                 {
-                    if (Input.GetKeyDown("space"))
+                    if (Input.GetButtonDown("Accion"))
                     {
                     transform.Rotate(new Vector3(0,45,0));
                     //Debug.Log("Gira");
