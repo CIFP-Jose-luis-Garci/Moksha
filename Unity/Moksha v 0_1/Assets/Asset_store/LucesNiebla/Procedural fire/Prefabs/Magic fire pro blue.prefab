@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4731861580502952}
   - component: {fileID: 198696392922457284}
   - component: {fileID: 199374976460404498}
+  - component: {fileID: -5768830614671192308}
+  - component: {fileID: 6350569936211346896}
   m_Layer: 0
   m_Name: Magic fire pro blue
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223526616464650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -12, y: 0, z: 16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4040067153382932}
@@ -4754,6 +4756,48 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!135 &-5768830614671192308
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223526616464650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6350569936211346896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223526616464650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792c11affc430de4da484d0a0ef70554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabLuz: {fileID: 0}
+  PosLuz1: {x: -35, y: 23, z: 96}
+  PosLuz2: {x: -41, y: 23, z: 104}
+  PosLuz3: {x: -33, y: 23, z: 112}
+  PosLuz4: {x: -40, y: 23, z: 121}
+  PosLuz5: {x: -50, y: 23, z: 119}
+  PosLuz6: {x: -56, y: 23, z: 112}
+  PosLuz7: {x: -52, y: 23, z: 102}
+  PosLuz8: {x: -61, y: 23, z: 94}
+  PosLuz9: {x: -68, y: 23, z: 103}
+  PosLuz10: {x: -67, y: 23, z: 113}
+  PosLuz11: {x: -64, y: 23, z: 124}
+  PosLuz12: {x: 0, y: 0, z: 0}
+  PosLuz13: {x: 0, y: 0, z: 0}
+  totem: {fileID: 0}
+  totemPos: {fileID: 0}
+  contador: 0
 --- !u!1 &1841570873457930
 GameObject:
   m_ObjectHideFlags: 0
