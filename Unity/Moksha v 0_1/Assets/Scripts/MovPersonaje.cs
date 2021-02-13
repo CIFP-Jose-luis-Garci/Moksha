@@ -94,6 +94,7 @@ public class MovPersonaje : MonoBehaviour
             {
                 animator.SetBool("Agacharse", false);
                 agachado = false;
+                
             }
         }
         else if (Input.GetButtonDown("Accion"))

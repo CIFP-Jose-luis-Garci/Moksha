@@ -753,7 +753,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Videojuego realizado por:\n\nAlberto S\xE1nchez Solana\n\xD3scar Vill\xE9n
     Mart\xEDn\nMarta Leonardo Encabo\nAlexis Jean Piere Farf\xE1n\nRaquel S\xE1nchez
-    ...\n\n2020 - 2021\n"
+    Navarro\n\n2020 - 2021\n"
 --- !u!222 &1836660881
 CanvasRenderer:
   m_ObjectHideFlags: 0
