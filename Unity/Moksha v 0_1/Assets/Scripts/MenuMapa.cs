@@ -22,18 +22,22 @@ public class MenuMapa : MonoBehaviour
     }
     void MostrarMapa()
     {
+        
         if (Input.GetButtonDown("BMapa"))
         {
             if (openMapa == false)
             {
-                openMapa = true;
                 mapa.SetActive(true);
+                Time.timeScale = 0;
+                openMapa = true;
             }
-            else if (openMapa == true)
+            else
             {
-                openMapa = false;
                 mapa.SetActive(false);
+                Time.timeScale = 1;
+                openMapa = false;
             }
+            
         }
     }
 }
