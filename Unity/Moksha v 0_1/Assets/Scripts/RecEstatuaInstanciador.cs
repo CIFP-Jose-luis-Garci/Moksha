@@ -17,11 +17,15 @@ public class RecEstatuaInstanciador : MonoBehaviour
     [SerializeField] Transform ciervoCorrectPos;
 
     [SerializeField] GameObject recompensa;
+    [SerializeField] Vector3 VectorTotemEstatuas;
+    private Transform PosTotemEstatuas;
 
+    
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("RevCorrectPos");
+        PosTotemEstatuas.position = VectorTotemEstatuas;
     }
 
     // Update is called once per frame
@@ -32,17 +36,17 @@ public class RecEstatuaInstanciador : MonoBehaviour
 
     void InstanciarRecompensa()
     {
-       /* if (leonInitPos.transform.rotation==leonCorrectPos.transform.rotation &&
+        if (leonInitPos.transform.rotation==leonCorrectPos.transform.rotation &&
             guerreroInitPos.transform.rotation == guerreroCorrectPos.transform.rotation && 
             monjeInitPos.transform.rotation == monjeCorrectPos.transform.rotation && 
             ciervoInitPos.transform.rotation == ciervoCorrectPos.transform.rotation)
         {
             Debug.Log("Opción Correcta");
-            Instantiate(recompensa);
+            Instantiate(recompensa, PosTotemEstatuas);
             StopCoroutine("RevCorrectPos");
-        }*/
+        }
 
-        if (leonInitPos.transform.rotation == leonCorrectPos.transform.rotation)
+        /*if (leonInitPos.transform.rotation == leonCorrectPos.transform.rotation)
         {
             Debug.Log("Leon");
         }
@@ -57,7 +61,7 @@ public class RecEstatuaInstanciador : MonoBehaviour
         if (ciervoInitPos.transform.rotation == ciervoCorrectPos.transform.rotation)
         {
             Debug.Log("Ciervo");
-        }
+        }*/
     }
     IEnumerator RevCorrectPos()
     {

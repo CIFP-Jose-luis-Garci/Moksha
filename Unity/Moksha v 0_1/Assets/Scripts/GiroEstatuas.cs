@@ -21,7 +21,7 @@ public class GiroEstatuas : MonoBehaviour
                  dist = Vector3.Distance(personaje.position, transform.position);
                 //Debug.Log("Distancia al otro: " + dist);
 
-                if (dist <= 4)
+                if (dist <= 2)
                 {
                     if (Input.GetButtonDown("Accion"))
                     {

@@ -711,7 +711,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.5990566, y: 1}
+    m_SensorSize: {x: 4.860215, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1671,6 +1671,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 831643091536221053, guid: 3d1bbd8c481f31648b51fde0323192d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d1bbd8c481f31648b51fde0323192d7, type: 3}
 --- !u!1 &747499495 stripped
@@ -2354,7 +2359,8 @@ MonoBehaviour:
   monjeCorrectPos: {fileID: 494303748}
   ciervoInitPos: {fileID: 293374846}
   ciervoCorrectPos: {fileID: 470407987}
-  recompensa: {fileID: 1220180687}
+  recompensa: {fileID: 105756, guid: 6cd0c7b3308fc7544ad2a49e762470f0, type: 3}
+  VectorTotemEstatuas: {x: 26.81007, y: 28.02548, z: 31.01689}
 --- !u!1 &1131428360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,12 +2558,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1220180687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 831643091536221053, guid: 3d1bbd8c481f31648b51fde0323192d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 747499494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225904561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3592,7 +3592,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.5990566, y: 1}
+    m_SensorSize: {x: 4.860215, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3921,7 +3921,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.5990566, y: 1}
+    m_SensorSize: {x: 4.860215, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4764,7 +4764,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.5990566, y: 1}
+    m_SensorSize: {x: 4.860215, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
