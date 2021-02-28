@@ -101,12 +101,7 @@ public class MovPersonaje : MonoBehaviour
         {
             animator.SetTrigger("Accion");
         }
-        /*
-        else if (Input.GetButtonDown("Pausa"))
-        {
-            SceneManager.LoadScene("Menu_Pausa");
-        }
-        */
+        
     }
 
 

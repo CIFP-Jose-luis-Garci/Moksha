@@ -17,18 +17,18 @@ public class MenuPausa : MonoBehaviour
     {
         if (Input.GetButtonDown("Pausa"))
         {
-            if (pausa.enabled == true)
-            {
-                pausa.enabled = false;
-                Time.timeScale = 1;
-            }
-
-            else if (pausa.enabled == false)
+            if (pausa.enabled == false)
             {
 
                 pausa.enabled = true;
                 Time.timeScale = 0;
             }
+            else if(pausa.enabled == true)
+            {
+                pausa.enabled = false;
+                Time.timeScale = 1;
+            }
+
             
         }
         /* con esto cerramos pausa con B, pero nos cierra todos los menus que haya abiertos
@@ -45,7 +45,10 @@ public class MenuPausa : MonoBehaviour
     
     public void PantallaIncio()
     {
-        SceneManager.LoadScene("Menu_Inicio");
+        if (pausa.enabled == true)
+        {
+            SceneManager.LoadScene("Menu_Inicio");
+        }
     }
     public void Controles()
     {

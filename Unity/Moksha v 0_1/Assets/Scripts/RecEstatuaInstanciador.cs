@@ -21,6 +21,8 @@ public class RecEstatuaInstanciador : MonoBehaviour
     private Transform PosTotemEstatuas;
 
     
+
+
     // Start is called before the first frame update
     void Start()
     {
