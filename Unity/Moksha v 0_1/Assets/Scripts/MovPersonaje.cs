@@ -94,7 +94,7 @@ public class MovPersonaje : MonoBehaviour
             {
                 animator.SetBool("Agacharse", false);
                 agachado = false;
-                
+                speed = 4.88f;
             }
         }
         else if (Input.GetButtonDown("Accion"))

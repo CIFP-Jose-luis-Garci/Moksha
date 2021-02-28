@@ -5,39 +5,32 @@ using UnityEngine.UI;
 
 public class MenuMapa : MonoBehaviour
 {
-    public GameObject mapa;
-    bool openMapa;
+    public Canvas mapa;
 
     // Start is called before the first frame update
     void Start()
     {
-        openMapa = false;
-        mapa.SetActive(false);
+        mapa.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        MostrarMapa();
-    }
-    void MostrarMapa()
-    {
-        
         if (Input.GetButtonDown("BMapa"))
         {
-            if (openMapa == false)
-            {
-                mapa.SetActive(true);
-                Time.timeScale = 0;
-                openMapa = true;
-            }
-            else
-            {
-                mapa.SetActive(false);
-                Time.timeScale = 1;
-                openMapa = false;
-            }
-            
+          if (mapa.enabled == true)
+          {
+               mapa.enabled = false;
+               Time.timeScale = 1;
+          }
+
+          else if (mapa.enabled == false)
+          {
+               mapa.enabled = true;
+               Time.timeScale = 0;
+          }
         }
     }
+   
+
 }
