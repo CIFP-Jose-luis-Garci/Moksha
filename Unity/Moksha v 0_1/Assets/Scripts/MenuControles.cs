@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuControles : MonoBehaviour
 {
-    public void Play()
+    public Canvas controles;
+
+    void Update()
     {
-        SceneManager.LoadScene("Menu_Pausa");
+        if (Input.GetButtonDown("Cancel"))
+        {
+            controles.enabled = false;
+
+        }
     }
 }

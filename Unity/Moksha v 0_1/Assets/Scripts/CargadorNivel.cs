@@ -8,7 +8,14 @@ public class CargadorNivel : MonoBehaviour
 {
     public GameObject PantallaDeCarga;
     public Slider Slider;
+    void Start()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
 
+    }
     public void CargarNivel(int NumeroDeEscena)
     {
         StartCoroutine(CargarAsync(NumeroDeEscena));
