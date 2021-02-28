@@ -23,7 +23,7 @@ public class MenuTools : MonoBehaviour
     void Update()
     {
         //Si pulsamos la tecla de herramientas
-        if(Input.GetKeyDown("space"))
+        if(Input.GetButtonDown("Herramientas"))
         {
             //Si el menú está oculto, lo mostramos
             if(menuHidden)
