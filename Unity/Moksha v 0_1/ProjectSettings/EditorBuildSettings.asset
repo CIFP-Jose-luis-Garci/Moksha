@@ -11,12 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escena1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Menu_Pausa.unity
-    guid: ca25abc897c73cf4ca45e02fd90a4927
-  - enabled: 1
-    path: Assets/Scenes/Menu_Controles.unity
-    guid: ece4992e31c910e4c989fdd7247ecaa6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu_Opciones.unity
     guid: 695162db15e1a3a4cbda0f1e9e623574

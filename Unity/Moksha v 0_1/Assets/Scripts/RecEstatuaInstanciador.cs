@@ -16,18 +16,17 @@ public class RecEstatuaInstanciador : MonoBehaviour
     [SerializeField] Transform ciervoInitPos;
     [SerializeField] Transform ciervoCorrectPos;
 
-    [SerializeField] GameObject recompensa;
-    [SerializeField] Vector3 VectorTotemEstatuas;
-    private Transform PosTotemEstatuas;
 
-    
+    [SerializeField] GameObject totemMesh;
+    private MeshRenderer meshRendererTotem;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("RevCorrectPos");
-        PosTotemEstatuas.position = VectorTotemEstatuas;
+        meshRendererTotem = totemMesh.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -44,7 +43,7 @@ public class RecEstatuaInstanciador : MonoBehaviour
             ciervoInitPos.transform.rotation == ciervoCorrectPos.transform.rotation)
         {
             Debug.Log("Opción Correcta");
-            Instantiate(recompensa, PosTotemEstatuas);
+            meshRendererTotem.enabled = true;
             StopCoroutine("RevCorrectPos");
         }
 
