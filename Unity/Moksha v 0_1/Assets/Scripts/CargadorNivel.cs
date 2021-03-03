@@ -54,6 +54,11 @@ public class CargadorNivel : MonoBehaviour
     {
         SceneManager.LoadScene("Menu_Info");
     }
+    
+    public void Salir()
+    {
+        Application.Quit();
+    }
 
 
     /*
